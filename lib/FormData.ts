@@ -11,6 +11,7 @@ export default class FormData extends BaseFormData {
       if (err || !Number.isNaN(length)) {
         callback(err, length);
       } else {
+        // prettier-ignore
         callback(null, (null as unknown) as number);
       }
     };
@@ -19,6 +20,7 @@ export default class FormData extends BaseFormData {
 
   getLengthSync(): number {
     const len = super.getLengthSync();
+    // prettier-ignore
     return Number.isNaN(len) ? ((null as unknown) as number) : len;
   }
 }
